@@ -6,6 +6,10 @@ app_pms = Flask(__name__)
 
 # executor = executor(max_workers=3)
 
+@app_pms.route('/api/v1/', methods=['GET'])
+def catch_all_url():
+    print('catch_all_url', request.url)
+
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
 def getReservation():
     arrival = request.args.get('arrival')
