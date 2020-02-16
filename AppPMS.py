@@ -48,7 +48,7 @@ def getAllReservation():
                 "arrival": "2020-02-20T18:00:00+03:00",
                 "departure": "2020-02-22T16:00:00+03:00",
                 "full_price": 1125000
-            },
+            }
             # {
             #     "booking_id": "2000",
             #     "name": "FAINA",
