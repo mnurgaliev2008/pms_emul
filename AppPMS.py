@@ -14,17 +14,17 @@ def catch_all_url():
 def getReservation():
     arrival = request.args.get('arrival')
     client = request.args.get('surname')
-    client_info = '{ “booking_id”: "qwertyuiop_id",' \
-                  ' “name”: "", “surname”: "{0}", ' \
-                  ' “arrival_date”: "{1}",' \
-                  ' “departure_date”: "2020-02-02", ' \
-                  ' “room_category”: 1, ' \
-                  ' “bed_type”: 2, ' \
-                  ' “meals”: 3,' \
-                  ' “full_price”: "100",' \
-                  ' “pay_status”: 1,' \
-                  ' “left_to_pay”: 90, ' \
-                  ' “card_last_4_digit”: 5555}'.format(client, arrival)
+    client_info = {'booking_id': "qwertyuiop_id",  'name': '',
+                    'surname': client,
+                   'arrival_date':  arrival,
+                   'departure_date': '2020-02-02',
+                   'room_category': 1,
+                   'bed_type': 2,
+                   'meals': 3,
+                   'full_price': "100",
+                   'pay_status': 1,
+                   'left_to_pay': 90,
+                   'card_last_4_digit': 5555}
     ans = {'bookings': [
         {
             'person_id': 1,
