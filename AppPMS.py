@@ -30,34 +30,34 @@ def getAllReservation():
                 "arrival": "2020-01-02T18:00:00+03:00",
                 "departure": "2020-01-05T16:00:00+03:00",
                 "full_price": 1125000
-            },
-            {
-                "booking_id": "1049",
-                "name": "НИКОЛАЙ",
-                "surname": "ГУРБАН",
-                "clientid": "1112",
-                "arrival": "2020-01-21T18:00:00+03:00",
-                "departure": "2020-03-05T16:00:00+03:00",
-                "full_price": 1125000
-            },
-            {
-                "booking_id": "2000",
-                "name": "ARNOLD",
-                "surname": "KOLYCHEV",
-                "clientid": "2222",
-                "arrival": "2020-01-02T18:00:00+03:00",
-                "departure": "2020-01-05T16:00:00+03:00",
-                "full_price": 1125000
-            },
-            {
-                "booking_id": "2000",
-                "name": "FAINA",
-                "surname": "SERGEEVNA",
-                "clientid": "3333",
-                "arrival": "2020-01-02T18:00:00+03:00",
-                "departure": "2020-01-05T16:00:00+03:00",
-                "full_price": 1125000
             }
+            # {
+            #     "booking_id": "1049",
+            #     "name": "НИКОЛАЙ",
+            #     "surname": "ГУРБАН",
+            #     "clientid": "1112",
+            #     "arrival": "2020-01-21T18:00:00+03:00",
+            #     "departure": "2020-03-05T16:00:00+03:00",
+            #     "full_price": 1125000
+            # },
+            # {
+            #     "booking_id": "2000",
+            #     "name": "ARNOLD",
+            #     "surname": "KOLYCHEV",
+            #     "clientid": "2222",
+            #     "arrival": "2020-01-02T18:00:00+03:00",
+            #     "departure": "2020-01-05T16:00:00+03:00",
+            #     "full_price": 1125000
+            # },
+            # {
+            #     "booking_id": "2000",
+            #     "name": "FAINA",
+            #     "surname": "SERGEEVNA",
+            #     "clientid": "3333",
+            #     "arrival": "2020-01-02T18:00:00+03:00",
+            #     "departure": "2020-01-05T16:00:00+03:00",
+            #     "full_price": 1125000
+            # }
             # {
             #     "booking_id": "2000",
             #     "name": "FAINA",
