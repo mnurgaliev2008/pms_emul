@@ -11,7 +11,6 @@ def catch_all_url():
     print('catch_all_url', request.url)
 
 
-
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
 def getAllBookings():
     print('url:{0}'.format(request.url))
@@ -126,6 +125,8 @@ def getAllBookings():
                 }
             ]
         }
+        print('getBooking for booking_id {0} ans: {1}'.format(booking_id,ans))
+
         return jsonify(ans)
 
 
