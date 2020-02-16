@@ -6,10 +6,38 @@ app_pms = Flask(__name__)
 
 # executor = executor(max_workers=3)
 
+client_info = {
+    "client_id": "${clientId}",
+    "name": "Два",
+    "surname": "TORRES *",
+    "arrival": "2020-01-17T18:00:00+03:00",
+    "departure": "2020-01-21T16:00:00+03:00",
+    "hotel_id": "",
+    "room_id": "6",
+    "services": []
+}
+
+
 @app_pms.route('/api/v1/', methods=['GET'])
 def catch_all_url():
     print('catch_all_url', request.url)
 
+@app_pms.route('/api/v1/hotels/1/clients', methods=['GET'])
+def getClientInfo():
+    client_id = request.args.get('client_id', None)
+
+
+    client_info = {
+        "client_id": client_id,
+        "name": "Два",
+        "surname": "KOLYCHEV",
+        "arrival": "2020-02-20T18:00:00+03:00",
+        "departure": "2020-02-22T16:00:00+03:00",
+        "hotel_id": "",
+        "room_id": "6",
+        "services": []
+    }
+    return jsonify(client_info)
 
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
 def getAllBookings():
@@ -127,7 +155,7 @@ def getAllBookings():
         }
         print('getBooking for booking_id {0} ans: {1}'.format(booking_id,ans))
 
-        return jsonify(ans)
+    return jsonify(ans)
 
 
 if __name__ == '__main__':
