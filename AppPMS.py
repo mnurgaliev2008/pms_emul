@@ -99,7 +99,7 @@ def getAllBookings():
         }
 
         print('getAllBookings ans: {0}'.format(ans))
-        return jsonify(ans)
+
     else:
         ans = {
             "booking_id": booking_id,
@@ -126,6 +126,7 @@ def getAllBookings():
                 }
             ]
         }
+        return jsonify(ans)
 
 
 if __name__ == '__main__':
