@@ -24,7 +24,7 @@ def catch_all_url():
 
 @app_pms.route('/api/v1/hotels/1/clients', methods=['GET'])
 def getClientInfo():
-    client_id = request.args.get('client_id', None)
+    client_id = request.args.get('client', None)
 
 
     client_info = {
