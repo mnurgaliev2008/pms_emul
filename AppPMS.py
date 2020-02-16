@@ -45,8 +45,8 @@ def getAllReservation():
                 "name": "ARNOLD",
                 "surname": "KOLYCHEV",
                 "clientid": "2222",
-                "arrival": "2020-02-02T18:00:00+03:00",
-                "departure": "2020-02-05T16:00:00+03:00",
+                "arrival": "2020-02-20T18:00:00+03:00",
+                "departure": "2020-02-22T16:00:00+03:00",
                 "full_price": 1125000
             },
             # {
