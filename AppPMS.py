@@ -12,6 +12,7 @@ def catch_all_url():
 
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
 def getReservation():
+    print('url:{0}'.format(request.url))
     print('args: {0}'.format(request.args))
     arrival = request.args.get('arrival')
     print('arrival: {0}'.format(arrival))
