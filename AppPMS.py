@@ -21,7 +21,7 @@ def getReservation():
     client_info = {'booking_id': "qwertyuiop_id",  'name': '',
                     'surname': client,
                    'arrival_date':  arrival,
-                   'departure_date': '2020-02-02',
+                   'departure_date': '2020-02-22',
                    'room_category': 1,
                    'bed_type': 2,
                    'meals': 3,
