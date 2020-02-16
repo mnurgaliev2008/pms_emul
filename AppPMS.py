@@ -11,94 +11,121 @@ def catch_all_url():
     print('catch_all_url', request.url)
 
 
+
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
-def getAllReservation():
+def getAllBookings():
     print('url:{0}'.format(request.url))
     print('args: {0}'.format(request.args))
-    arrival = request.args.get('arrival')
-    print('arrival: {0}'.format(arrival))
-    client = request.args.get('surname', 'KOLYCHEV')
-    print('client: {0}'.format(client))
+    booking_id = request.args.get('booking', None)
+    if booking_id is None:
 
-    ans = {
-        "bookings": [
-            # {
-            #     "booking_id": "1000",
-            #     "name": "ARNOLD",
-            #     "surname": "SCHWARZENEGGER",
-            #     "clientid": "1111",
-            #     "arrival": "2020-02-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # }
-            # {
-            #     "booking_id": "1049",
-            #     "name": "НИКОЛАЙ",
-            #     "surname": "ГУРБАН",
-            #     "clientid": "1112",
-            #     "arrival": "2020-01-21T18:00:00+03:00",
-            #     "departure": "2020-03-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # },
-            {
-                "booking_id": "2000",
-                "name": "ARNOLD",
-                "surname": "KOLYCHEV",
-                "clientid": "2222",
-                "arrival": "2020-02-20T18:00:00+03:00",
-                "departure": "2020-02-22T16:00:00+03:00",
-                "full_price": 1125000
-            }
-            # {
-            #     "booking_id": "2000",
-            #     "name": "FAINA",
-            #     "surname": "SERGEEVNA",
-            #     "clientid": "3333",
-            #     "arrival": "2020-01-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # }
-            # {
-            #     "booking_id": "2000",
-            #     "name": "FAINA",
-            #     "surname": "SERGEEVNA",
-            #     "clientid": "3333",
-            #     "arrival": "2020-01-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # },
-            # {
-            #     "booking_id": "2000",
-            #     "name": "FAINA",
-            #     "surname": "SERGEEVNA",
-            #     "clientid": "3333",
-            #     "arrival": "2020-01-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # },
-            # {
-            #     "booking_id": "2000",
-            #     "name": "FAINA",
-            #     "surname": "SERGEEVNA",
-            #     "clientid": "3333",
-            #     "arrival": "2020-01-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # },
-            # {
-            #     "booking_id": "2000",
-            #     "name": "FAINA",
-            #     "surname": "SERGEEVNA",
-            #     "clientid": "3333",
-            #     "arrival": "2020-01-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # }
-        ]
-    }
+        arrival = request.args.get('arrival')
+        print('arrival: {0}'.format(arrival))
+        ans = {
+            "bookings": [
+                # {
+                #     "booking_id": "1000",
+                #     "name": "ARNOLD",
+                #     "surname": "SCHWARZENEGGER",
+                #     "clientid": "1111",
+                #     "arrival": "2020-02-02T18:00:00+03:00",
+                #     "departure": "2020-01-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # }
+                # {
+                #     "booking_id": "1049",
+                #     "name": "НИКОЛАЙ",
+                #     "surname": "ГУРБАН",
+                #     "clientid": "1112",
+                #     "arrival": "2020-01-21T18:00:00+03:00",
+                #     "departure": "2020-03-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # },
+                {
+                    "booking_id": "2000",
+                    "name": "ARNOLD",
+                    "surname": "KOLYCHEV",
+                    "clientid": "2222",
+                    "arrival": "2020-02-20T18:00:00+03:00",
+                    "departure": "2020-02-22T16:00:00+03:00",
+                    "full_price": 1125000
+                }
+                # {
+                #     "booking_id": "2000",
+                #     "name": "FAINA",
+                #     "surname": "SERGEEVNA",
+                #     "clientid": "3333",
+                #     "arrival": "2020-01-02T18:00:00+03:00",
+                #     "departure": "2020-01-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # }
+                # {
+                #     "booking_id": "2000",
+                #     "name": "FAINA",
+                #     "surname": "SERGEEVNA",
+                #     "clientid": "3333",
+                #     "arrival": "2020-01-02T18:00:00+03:00",
+                #     "departure": "2020-01-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # },
+                # {
+                #     "booking_id": "2000",
+                #     "name": "FAINA",
+                #     "surname": "SERGEEVNA",
+                #     "clientid": "3333",
+                #     "arrival": "2020-01-02T18:00:00+03:00",
+                #     "departure": "2020-01-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # },
+                # {
+                #     "booking_id": "2000",
+                #     "name": "FAINA",
+                #     "surname": "SERGEEVNA",
+                #     "clientid": "3333",
+                #     "arrival": "2020-01-02T18:00:00+03:00",
+                #     "departure": "2020-01-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # },
+                # {
+                #     "booking_id": "2000",
+                #     "name": "FAINA",
+                #     "surname": "SERGEEVNA",
+                #     "clientid": "3333",
+                #     "arrival": "2020-01-02T18:00:00+03:00",
+                #     "departure": "2020-01-05T16:00:00+03:00",
+                #     "full_price": 1125000
+                # }
+            ]
+        }
 
-    print('getReservation ans: {0}'.format(ans))
-    return jsonify(ans)
+        print('getAllBookings ans: {0}'.format(ans))
+        return jsonify(ans)
+    else:
+        ans = {
+            "booking_id": booking_id,
+            "client_id": "1112",
+            "name": "НИКОЛАЙ",
+            "surname": "KOLYCHEV",
+            "arrival": "2020-02-20T18:00:00+03:00",
+            "departure": "2020-02-22T16:00:00+03:00",
+            "hotel_id": "",
+            "room_category_id": 4,
+            "room_category": "ЛЮКС",
+            "room_id": 7,
+            "room_number": "105",
+            "bed_type": "2",
+            "meals": "Завтрак",
+            "full_price": 2310000,
+            "pay_status": "оплачено частично",
+            "left_to_pay": 2275000,
+            "card_last_4_digits": 0,
+            "satelites": [
+                {
+                    "satelite_number": "01",
+                    "satelite_clientid": "3333"
+                }
+            ]
+        }
 
 
 if __name__ == '__main__':
