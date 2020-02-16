@@ -22,15 +22,15 @@ def getAllReservation():
 
     ans = {
         "bookings": [
-            {
-                "booking_id": "1000",
-                "name": "ARNOLD",
-                "surname": "SCHWARZENEGGER",
-                "clientid": "1111",
-                "arrival": "2020-02-02T18:00:00+03:00",
-                "departure": "2020-01-05T16:00:00+03:00",
-                "full_price": 1125000
-            }
+            # {
+            #     "booking_id": "1000",
+            #     "name": "ARNOLD",
+            #     "surname": "SCHWARZENEGGER",
+            #     "clientid": "1111",
+            #     "arrival": "2020-02-02T18:00:00+03:00",
+            #     "departure": "2020-01-05T16:00:00+03:00",
+            #     "full_price": 1125000
+            # }
             # {
             #     "booking_id": "1049",
             #     "name": "НИКОЛАЙ",
@@ -40,15 +40,15 @@ def getAllReservation():
             #     "departure": "2020-03-05T16:00:00+03:00",
             #     "full_price": 1125000
             # },
-            # {
-            #     "booking_id": "2000",
-            #     "name": "ARNOLD",
-            #     "surname": "KOLYCHEV",
-            #     "clientid": "2222",
-            #     "arrival": "2020-01-02T18:00:00+03:00",
-            #     "departure": "2020-01-05T16:00:00+03:00",
-            #     "full_price": 1125000
-            # },
+            {
+                "booking_id": "2000",
+                "name": "ARNOLD",
+                "surname": "KOLYCHEV",
+                "clientid": "2222",
+                "arrival": "2020-02-02T18:00:00+03:00",
+                "departure": "2020-02-05T16:00:00+03:00",
+                "full_price": 1125000
+            },
             # {
             #     "booking_id": "2000",
             #     "name": "FAINA",
