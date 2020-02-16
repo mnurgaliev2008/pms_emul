@@ -16,7 +16,7 @@ def getReservation():
     print('args: {0}'.format(request.args))
     arrival = request.args.get('arrival')
     print('arrival: {0}'.format(arrival))
-    client = request.args.get('surname')
+    client = request.args.get('surname', 'KOLYCHEV')
     print('client: {0}'.format(client))
     client_info = {'booking_id': "qwertyuiop_id",  'name': '',
                     'surname': client,
