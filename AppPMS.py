@@ -41,7 +41,7 @@ def getAllBookings():
                     "name": "ARNOLD",
                     "surname": "SCHWARZENEGGER",
                     "clientid": "1111",
-                    "arrival": "2020-02-02T18:00:00+03:00",
+                    "arrival": "2020-02-20T18:00:00+03:00",
                     "departure": "2020-01-05T16:00:00+03:00",
                     "full_price": 1125000
                 },
