@@ -3,12 +3,122 @@ import json
 
 app_pms = Flask(__name__)
 
+bookings = {"bookings": [
+    {
+        "booking_id": "1000",
+        "name": "ARNOLD",
+        "surname": "SCHWARZENEGGER",
+        "clientid": "2000",
+        "arrival": "2020-02-20T18:00:00+03:00",
+        "departure": "2020-01-05T16:00:00+03:00",
+        "full_price": 1125000
+    },
+    {
+        "booking_id": "1001",
+        "name": "НИКОЛАЙ",
+        "surname": "KOLYCHEV",
+        "clientid": "2001",
+        "arrival": "2020-02-20T18:00:00+03:00",
+        "departure": "2020-03-05T16:00:00+03:00",
+        "full_price": 1125000
+    },
+    {
+        "booking_id": "1002",
+        "name": "ARNOLD",
+        "surname": "KOLYCHEV",
+        "clientid": "2002",
+        "arrival": "2020-02-20T18:00:00+03:00",
+        "departure": "2020-02-22T16:00:00+03:00",
+        "full_price": 1125000
+    },
+    {
+        "booking_id": "1003",
+        "name": "FAINA",
+        "surname": "SERGEEVNA",
+        "clientid": "2003",
+        "arrival": "2020-02-20T18:00:00+03:00",
+        "departure": "2020-03-05T16:00:00+03:00",
+        "full_price": 1125000
+    }
+    # {
+    #     "booking_id": "2000",
+    #     "name": "FAINA",
+    #     "surname": "SERGEEVNA",
+    #     "clientid": "3333",
+    #     "arrival": "2020-01-02T18:00:00+03:00",
+    #     "departure": "2020-01-05T16:00:00+03:00",
+    #     "full_price": 1125000
+    # },
+    # {
+    #     "booking_id": "2000",
+    #     "name": "FAINA",
+    #     "surname": "SERGEEVNA",
+    #     "clientid": "3333",
+    #     "arrival": "2020-01-02T18:00:00+03:00",
+    #     "departure": "2020-01-05T16:00:00+03:00",
+    #     "full_price": 1125000
+    # },
+    # {
+    #     "booking_id": "2000",
+    #     "name": "FAINA",
+    #     "surname": "SERGEEVNA",
+    #     "clientid": "3333",
+    #     "arrival": "2020-01-02T18:00:00+03:00",
+    #     "departure": "2020-01-05T16:00:00+03:00",
+    #     "full_price": 1125000
+    # },
+    # {
+    #     "booking_id": "2000",
+    #     "name": "FAINA",
+    #     "surname": "SERGEEVNA",
+    #     "clientid": "3333",
+    #     "arrival": "2020-01-02T18:00:00+03:00",
+    #     "departure": "2020-01-05T16:00:00+03:00",
+    #     "full_price": 1125000
+    # }
+]}
+transformed_bookings = {
+        "1000": {
+            "name": "ARNOLD",
+            "surname": "SCHWARZENEGGER",
+            "clientid": "1111",
+            "arrival": "2020-02-20T18:00:00+03:00",
+            "departure": "2020-01-05T16:00:00+03:00",
+            "full_price": 1125000
+        },
+        "1001": {
+            "name": "НИКОЛАЙ",
+            "surname": "KOLYCHEV",
+            "clientid": "1112",
+            "arrival": "2020-02-20T18:00:00+03:00",
+            "departure": "2020-03-05T16:00:00+03:00",
+            "full_price": 1125000
+        },
+        "1002": {
+            "name": "НИКОЛАЙ",
+            "surname": "KOLYCHEV",
+            "clientid": "1112",
+            "arrival": "2020-02-20T18:00:00+03:00",
+            "departure": "2020-03-05T16:00:00+03:00",
+            "full_price": 1125000
+        },
+        "1003": {
+            "name": "FAINA",
+            "surname": "SERGEEVNA",
+            "clientid": "2003",
+            "arrival": "2020-02-20T18:00:00+03:00",
+            "departure": "2020-03-05T16:00:00+03:00",
+            "full_price": 1125000
+        }
+    }
+
 
 # executor = executor(max_workers=3)
 
 @app_pms.route('/api/v1/', methods=['GET'])
 def catch_all_url():
     print('catch_all_url', request.url)
+
 
 @app_pms.route('/api/v1/hotels/1/clients', methods=['GET'])
 def getClientInfo():
@@ -25,91 +135,17 @@ def getClientInfo():
     }
     return jsonify(client_info)
 
+
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
 def getAllBookings():
     print('url:{0}'.format(request.url))
     print('args: {0}'.format(request.args))
     booking_id = request.args.get('booking', None)
     if booking_id is None:
-
         arrival = request.args.get('arrival')
         print('arrival: {0}'.format(arrival))
-        ans = {
-            "bookings": [
-                {
-                    "booking_id": "1000",
-                    "name": "ARNOLD",
-                    "surname": "SCHWARZENEGGER",
-                    "clientid": "1111",
-                    "arrival": "2020-02-20T18:00:00+03:00",
-                    "departure": "2020-01-05T16:00:00+03:00",
-                    "full_price": 1125000
-                },
-                {
-                    "booking_id": "1049",
-                    "name": "НИКОЛАЙ",
-                    "surname": "KOLYCHEV",
-                    "clientid": "1112",
-                    "arrival": "2020-01-21T18:00:00+03:00",
-                    "departure": "2020-03-05T16:00:00+03:00",
-                    "full_price": 1125000
-                },
-                {
-                    "booking_id": "2000",
-                    "name": "ARNOLD",
-                    "surname": "KOLYCHEV",
-                    "clientid": "2222",
-                    "arrival": "2020-02-20T18:00:00+03:00",
-                    "departure": "2020-02-22T16:00:00+03:00",
-                    "full_price": 1125000
-                }
-                # {
-                #     "booking_id": "2000",
-                #     "name": "FAINA",
-                #     "surname": "SERGEEVNA",
-                #     "clientid": "3333",
-                #     "arrival": "2020-01-02T18:00:00+03:00",
-                #     "departure": "2020-01-05T16:00:00+03:00",
-                #     "full_price": 1125000
-                # }
-                # {
-                #     "booking_id": "2000",
-                #     "name": "FAINA",
-                #     "surname": "SERGEEVNA",
-                #     "clientid": "3333",
-                #     "arrival": "2020-01-02T18:00:00+03:00",
-                #     "departure": "2020-01-05T16:00:00+03:00",
-                #     "full_price": 1125000
-                # },
-                # {
-                #     "booking_id": "2000",
-                #     "name": "FAINA",
-                #     "surname": "SERGEEVNA",
-                #     "clientid": "3333",
-                #     "arrival": "2020-01-02T18:00:00+03:00",
-                #     "departure": "2020-01-05T16:00:00+03:00",
-                #     "full_price": 1125000
-                # },
-                # {
-                #     "booking_id": "2000",
-                #     "name": "FAINA",
-                #     "surname": "SERGEEVNA",
-                #     "clientid": "3333",
-                #     "arrival": "2020-01-02T18:00:00+03:00",
-                #     "departure": "2020-01-05T16:00:00+03:00",
-                #     "full_price": 1125000
-                # },
-                # {
-                #     "booking_id": "2000",
-                #     "name": "FAINA",
-                #     "surname": "SERGEEVNA",
-                #     "clientid": "3333",
-                #     "arrival": "2020-01-02T18:00:00+03:00",
-                #     "departure": "2020-01-05T16:00:00+03:00",
-                #     "full_price": 1125000
-                # }
-            ]
-        }
+        ans = bookings
+
         # print('getAllBookings ans: {0}'.format(ans))
     else:
         ans = generateBooking(booking_id)
@@ -117,13 +153,9 @@ def getAllBookings():
 
 
 def generateBooking(booking_id):
-    ans = {
+    booking = transformed_bookings[booking_id]
+    custom_booking = {
         "booking_id": booking_id,
-        "client_id": "id_{0}".format(booking_id),
-        "name": "НИКОЛАЙ",
-        "surname": "KOLYCHEV",
-        "arrival": "2020-02-20T18:00:00+03:00",
-        "departure": "2020-02-22T16:00:00+03:00",
         "hotel_id": "",
         "room_category_id": 4,
         "room_category": "ЛЮКС",
@@ -131,7 +163,6 @@ def generateBooking(booking_id):
         "room_number": "105",
         "bed_type": "2",
         "meals": "Завтрак",
-        "full_price": 2310000,
         "pay_status": "оплачено частично",
         "left_to_pay": 2275000,
         "card_last_4_digits": 0,
@@ -142,7 +173,8 @@ def generateBooking(booking_id):
             }
         ]
     }
-    return ans
+    custom_booking.update(booking)
+    return custom_booking
 
 
 if __name__ == '__main__':
