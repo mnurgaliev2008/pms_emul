@@ -138,8 +138,6 @@ def getClientInfo():
 
 @app_pms.route('/api/v1/hotels/1/bookings', methods=['GET'])
 def getAllBookings():
-    print('url:{0}'.format(request.url))
-    print('args: {0}'.format(request.args))
     booking_id = request.args.get('booking', None)
     if booking_id is None:
         arrival = request.args.get('arrival')
@@ -174,6 +172,7 @@ def generateBooking(booking_id):
         ]
     }
     custom_booking.update(booking)
+    print('generateBooking return {0}'.format(custom_booking))
     return custom_booking
 
 
