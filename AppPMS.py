@@ -153,6 +153,7 @@ def getAllBookings():
     return jsonify(ans)
 
 def getClientInfoByClientId(client_id):
+    print('getClientInfoByClientId client_id: {0}'.format(client_id))
     for item in transformed_bookings.values():
         if client_id == item['client_id']:
             return (item['name'],item['surname'],item['arrival'],item['departure'])
