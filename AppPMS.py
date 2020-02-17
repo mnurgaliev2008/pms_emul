@@ -9,8 +9,8 @@ bookings = {"bookings": [
         "name": "ARNOLD",
         "surname": "SCHWARZENEGGER",
         "client_id": "2000",
-        "arrival": "2020-02-20T18:00:00+03:00",
-        "departure": "2020-01-05T16:00:00+03:00",
+        "arrival": "2020-02-20",
+        "departure": "2020-01-05",
         "full_price": 1125000
     },
     {
@@ -18,8 +18,8 @@ bookings = {"bookings": [
         "name": "НИКОЛАЙ",
         "surname": "KOLYCHEV",
         "client_id": "2001",
-        "arrival": "2020-02-20T18:00:00+03:00",
-        "departure": "2020-03-05T16:00:00+03:00",
+        "arrival": "2020-02-20",
+        "departure": "2020-03-05",
         "full_price": 1125000
     },
     {
@@ -27,8 +27,8 @@ bookings = {"bookings": [
         "name": "ARNOLD",
         "surname": "KOLYCHEV",
         "client_id": "2002",
-        "arrival": "2020-02-20T18:00:00+03:00",
-        "departure": "2020-02-22T16:00:00+03:00",
+        "arrival": "2020-02-20",
+        "departure": "2020-02-22",
         "full_price": 1125000
     },
     {
@@ -36,8 +36,8 @@ bookings = {"bookings": [
         "name": "FAINA",
         "surname": "SERGEEVNA",
         "client_id": "2003",
-        "arrival": "2020-02-20T18:00:00+03:00",
-        "departure": "2020-03-05T16:00:00+03:00",
+        "arrival": "2020-02-20",
+        "departure": "2020-03-05",
         "full_price": 1125000
     }
     # {
@@ -127,8 +127,8 @@ def getClientInfo():
         "client_id": client_id,
         "name": "Два",
         "surname": "KOLYCHEV2",
-        "arrival": "2020-02-20T18:00:00+03:00",
-        "departure": "2020-02-22T16:00:00+03:00",
+        "arrival": "2020-02-20",
+        "departure": "2020-02-22",
         "hotel_id": "",
         "room_id": "6",
         "services": []
