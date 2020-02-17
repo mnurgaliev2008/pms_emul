@@ -142,7 +142,7 @@ def generateBooking(booking_id):
             }
         ]
     }
-    yield ans
+    return ans
 
 
 if __name__ == '__main__':
