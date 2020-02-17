@@ -110,38 +110,39 @@ def getAllBookings():
                 # }
             ]
         }
-
-        print('getAllBookings ans: {0}'.format(ans))
-
+        # print('getAllBookings ans: {0}'.format(ans))
     else:
-        ans = {
-            "booking_id": booking_id,
-            "client_id": "1112",
-            "name": "НИКОЛАЙ",
-            "surname": "KOLYCHEV",
-            "arrival": "2020-02-20T18:00:00+03:00",
-            "departure": "2020-02-22T16:00:00+03:00",
-            "hotel_id": "",
-            "room_category_id": 4,
-            "room_category": "ЛЮКС",
-            "room_id": 7,
-            "room_number": "105",
-            "bed_type": "2",
-            "meals": "Завтрак",
-            "full_price": 2310000,
-            "pay_status": "оплачено частично",
-            "left_to_pay": 2275000,
-            "card_last_4_digits": 0,
-            "satelites": [
-                {
-                    "satelite_number": "01",
-                    "satelite_clientid": "3333"
-                }
-            ]
-        }
-        print('getBooking for booking_id {0} ans: {1}'.format(booking_id,ans))
-
+        ans = generateBooking(booking_id)
     return jsonify(ans)
+
+
+def generateBooking(booking_id):
+    ans = {
+        "booking_id": booking_id,
+        "client_id": "id_{0}".format(booking_id),
+        "name": "НИКОЛАЙ",
+        "surname": "KOLYCHEV",
+        "arrival": "2020-02-20T18:00:00+03:00",
+        "departure": "2020-02-22T16:00:00+03:00",
+        "hotel_id": "",
+        "room_category_id": 4,
+        "room_category": "ЛЮКС",
+        "room_id": 7,
+        "room_number": "105",
+        "bed_type": "2",
+        "meals": "Завтрак",
+        "full_price": 2310000,
+        "pay_status": "оплачено частично",
+        "left_to_pay": 2275000,
+        "card_last_4_digits": 0,
+        "satelites": [
+            {
+                "satelite_number": "01",
+                "satelite_clientid": "3333"
+            }
+        ]
+    }
+    yield ans
 
 
 if __name__ == '__main__':
