@@ -138,7 +138,7 @@ def generateBooking(booking_id):
         "satelites": [
             {
                 "satelite_number": "01",
-                "satelite_clientid": "3333"
+                "satelite_clientid": "id_{0}".format(booking_id)
             }
         ]
     }
