@@ -154,6 +154,7 @@ def getAllBookings():
 
 def getClientInfoByClientId(client_id):
     print('getClientInfoByClientId client_id: {0}'.format(client_id))
+    client_id = '{0}'.format(int(client_id)-1000)
     for item in transformed_bookings.values():
         if client_id == item['client_id']:
             return (item['name'],item['surname'],item['arrival'],item['departure'])
