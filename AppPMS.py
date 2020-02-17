@@ -169,7 +169,7 @@ def generateBooking(booking_id):
         "satelites": [
             {
                 "satelite_number": "01",
-                "satelite_clientid": booking_id+2000
+                "satelite_clientid": {0}.format(booking_id+2000)
             }
         ]
     }
