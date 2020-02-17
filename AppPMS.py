@@ -48,7 +48,7 @@ def getAllBookings():
                 {
                     "booking_id": "1049",
                     "name": "НИКОЛАЙ",
-                    "surname": "ГУРБАН",
+                    "surname": "KOLYCHEV",
                     "clientid": "1112",
                     "arrival": "2020-01-21T18:00:00+03:00",
                     "departure": "2020-03-05T16:00:00+03:00",
