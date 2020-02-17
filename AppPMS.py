@@ -123,12 +123,14 @@ def catch_all_url():
 @app_pms.route('/api/v1/hotels/1/clients', methods=['GET'])
 def getClientInfo():
     client_id = request.args.get('client', None)
+    name, surname, arrival, departure = getClientInfoByClientId(client_id)
+
     client_info = {
         "client_id": client_id,
-        "name": "Два",
-        "surname": "KOLYCHEV2",
-        "arrival": "2020-02-20",
-        "departure": "2020-02-22",
+        "name": name,
+        "surname": surname,
+        "arrival": arrival,
+        "departure": departure,
         "hotel_id": "",
         "room_id": "6",
         "services": []
@@ -150,6 +152,10 @@ def getAllBookings():
         print('BookingId {0} return {1}'.format(booking_id, ans))
     return jsonify(ans)
 
+def getClientInfoByClientId(client_id):
+    for item in transformed_bookings.values():
+        if client_id == item['client_id']:
+            return (item['name'],item['surname'],item['arrival'],item['departure'])
 
 def generateBooking(booking_id):
     booking = transformed_bookings[booking_id]
@@ -178,4 +184,5 @@ def generateBooking(booking_id):
 
 
 if __name__ == '__main__':
+    # print (getClientInfoByClientId('2000'))
     app_pms.run(debug=True, host='0.0.0.0', port=5000)
