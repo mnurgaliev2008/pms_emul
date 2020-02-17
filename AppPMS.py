@@ -152,6 +152,7 @@ def getAllBookings():
 
 def generateBooking(booking_id):
     booking = transformed_bookings[booking_id]
+    print('tr_booking: {0}'.format(booking))
     custom_booking = {
         "booking_id": booking_id,
         "hotel_id": "",
