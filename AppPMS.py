@@ -147,6 +147,7 @@ def getAllBookings():
         # print('getAllBookings ans: {0}'.format(ans))
     else:
         ans = generateBooking(booking_id)
+        print('BookingId {0} return {1}'.format(booking_id, ans))
     return jsonify(ans)
 
 
@@ -173,7 +174,6 @@ def generateBooking(booking_id):
         ]
     }
     custom_booking.update(booking)
-    print('generateBooking return {0}'.format(custom_booking))
     return custom_booking
 
 
