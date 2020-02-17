@@ -8,7 +8,7 @@ bookings = {"bookings": [
         "booking_id": "1000",
         "name": "ARNOLD",
         "surname": "SCHWARZENEGGER",
-        "clientid": "2000",
+        "client_id": "2000",
         "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-01-05T16:00:00+03:00",
         "full_price": 1125000
@@ -17,7 +17,7 @@ bookings = {"bookings": [
         "booking_id": "1001",
         "name": "НИКОЛАЙ",
         "surname": "KOLYCHEV",
-        "clientid": "2001",
+        "client_id": "2001",
         "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-03-05T16:00:00+03:00",
         "full_price": 1125000
@@ -26,7 +26,7 @@ bookings = {"bookings": [
         "booking_id": "1002",
         "name": "ARNOLD",
         "surname": "KOLYCHEV",
-        "clientid": "2002",
+        "client_id": "2002",
         "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-02-22T16:00:00+03:00",
         "full_price": 1125000
@@ -35,7 +35,7 @@ bookings = {"bookings": [
         "booking_id": "1003",
         "name": "FAINA",
         "surname": "SERGEEVNA",
-        "clientid": "2003",
+        "client_id": "2003",
         "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-03-05T16:00:00+03:00",
         "full_price": 1125000
@@ -44,7 +44,7 @@ bookings = {"bookings": [
     #     "booking_id": "2000",
     #     "name": "FAINA",
     #     "surname": "SERGEEVNA",
-    #     "clientid": "3333",
+    #     "client_id": "3333",
     #     "arrival": "2020-01-02T18:00:00+03:00",
     #     "departure": "2020-01-05T16:00:00+03:00",
     #     "full_price": 1125000
@@ -53,7 +53,7 @@ bookings = {"bookings": [
     #     "booking_id": "2000",
     #     "name": "FAINA",
     #     "surname": "SERGEEVNA",
-    #     "clientid": "3333",
+    #     "client_id": "3333",
     #     "arrival": "2020-01-02T18:00:00+03:00",
     #     "departure": "2020-01-05T16:00:00+03:00",
     #     "full_price": 1125000
@@ -62,7 +62,7 @@ bookings = {"bookings": [
     #     "booking_id": "2000",
     #     "name": "FAINA",
     #     "surname": "SERGEEVNA",
-    #     "clientid": "3333",
+    #     "client_id": "3333",
     #     "arrival": "2020-01-02T18:00:00+03:00",
     #     "departure": "2020-01-05T16:00:00+03:00",
     #     "full_price": 1125000
@@ -71,7 +71,7 @@ bookings = {"bookings": [
     #     "booking_id": "2000",
     #     "name": "FAINA",
     #     "surname": "SERGEEVNA",
-    #     "clientid": "3333",
+    #     "client_id": "3333",
     #     "arrival": "2020-01-02T18:00:00+03:00",
     #     "departure": "2020-01-05T16:00:00+03:00",
     #     "full_price": 1125000
@@ -81,7 +81,7 @@ transformed_bookings = {
         "1000": {
             "name": "ARNOLD",
             "surname": "SCHWARZENEGGER",
-            "clientid": "2000",
+            "client_id": "2000",
             "arrival": "2020-02-20T18:00:00+03:00",
             "departure": "2020-01-05T16:00:00+03:00",
             "full_price": 1125000
@@ -89,7 +89,7 @@ transformed_bookings = {
         "1001": {
             "name": "НИКОЛАЙ",
             "surname": "KOLYCHEV",
-            "clientid": "2001",
+            "client_id": "2001",
             "arrival": "2020-02-20T18:00:00+03:00",
             "departure": "2020-03-05T16:00:00+03:00",
             "full_price": 1125000
@@ -97,7 +97,7 @@ transformed_bookings = {
         "1002": {
             "name": "НИКОЛАЙ",
             "surname": "KOLYCHEV",
-            "clientid": "2002",
+            "client_id": "2002",
             "arrival": "2020-02-20T18:00:00+03:00",
             "departure": "2020-03-05T16:00:00+03:00",
             "full_price": 1125000
@@ -105,7 +105,7 @@ transformed_bookings = {
         "1003": {
             "name": "FAINA",
             "surname": "SERGEEVNA",
-            "clientid": "2003",
+            "client_id": "2003",
             "arrival": "2020-02-20T18:00:00+03:00",
             "departure": "2020-03-05T16:00:00+03:00",
             "full_price": 1125000
