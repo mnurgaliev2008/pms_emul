@@ -11,7 +11,7 @@ bookings = {"bookings": [
         "client_id": "2000",
         "arrival": "2020-02-20",
         "departure": "2020-01-05",
-        "full_price": 1125000
+        "full_price": 1500
     },
     {
         "booking_id": "1001",
@@ -20,7 +20,7 @@ bookings = {"bookings": [
         "client_id": "2001",
         "arrival": "2020-02-20",
         "departure": "2020-03-05",
-        "full_price": 1125000
+        "full_price": 1501
     },
     {
         "booking_id": "1002",
@@ -29,16 +29,16 @@ bookings = {"bookings": [
         "client_id": "2002",
         "arrival": "2020-02-20",
         "departure": "2020-02-22",
-        "full_price": 1125000
+        "full_price": 1502
     },
     {
         "booking_id": "1003",
         "name": "FAINA",
         "surname": "SERGEEVNA",
         "client_id": "2003",
-        "arrival": "2020-02-20",
+        "arrival": "2020-02-22",
         "departure": "2020-03-05",
-        "full_price": 1125000
+        "full_price": 1503
     }
     # {
     #     "booking_id": "2000",
@@ -82,33 +82,33 @@ transformed_bookings = {
             "name": "ARNOLD",
             "surname": "SCHWARZENEGGER",
             "client_id": "2000",
-            "arrival": "2020-02-20T18:00:00+03:00",
-            "departure": "2020-01-05T16:00:00+03:00",
-            "full_price": 1125000
+            "arrival": "2020-02-20",
+            "departure": "2020-01-05",
+            "full_price": 1500
         },
         "1001": {
             "name": "НИКОЛАЙ",
             "surname": "KOLYCHEV",
             "client_id": "2001",
-            "arrival": "2020-02-20T18:00:00+03:00",
-            "departure": "2020-03-05T16:00:00+03:00",
-            "full_price": 1125000
+            "arrival": "2020-02-20",
+            "departure": "2020-03-05",
+            "full_price": 1501
         },
         "1002": {
-            "name": "НИКОЛАЙ",
+            "name": "ARNOLD",
             "surname": "KOLYCHEV",
             "client_id": "2002",
-            "arrival": "2020-02-20T18:00:00+03:00",
-            "departure": "2020-03-05T16:00:00+03:00",
-            "full_price": 1125000
+            "arrival": "2020-02-20",
+            "departure": "2020-03-05",
+            "full_price": 1502
         },
         "1003": {
             "name": "FAINA",
             "surname": "SERGEEVNA",
             "client_id": "2003",
-            "arrival": "2020-02-20T18:00:00+03:00",
-            "departure": "2020-03-05T16:00:00+03:00",
-            "full_price": 1125000
+            "arrival": "2020-02-20T",
+            "departure": "2020-03-05",
+            "full_price": 1503
         }
     }
 
