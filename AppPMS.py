@@ -161,9 +161,10 @@ def getAllBookings():
         print('BookingId {0} return {1}'.format(booking_id, ans))
     return jsonify(ans)
 
-@app_pms.route('/api/v1/hotels/1/bookings', methods=['POST'])
-def pay():
+@app_pms.route('/api/v1/hotels/1/bookings/<booking_id>/pay', methods=['POST'])
+def pay(booking_id):
     print('pay: {0}'.format(request.url))
+    print('booking_id: {0}'.format(booking_id))
 
 def getClientInfoByClientId(client_id):
     print('getClientInfoByClientId client_id: {0}'.format(client_id))
