@@ -27,7 +27,7 @@ bookings = {"bookings": [
         "name": "ARNOLD",
         "surname": "KOLYCHEV",
         "client_id": "2002",
-        "arrival": "2020-02-20T18:00:00+03:00",
+        "arrival": "2020-02-21T18:00:00+03:00",
         "departure": "2020-02-22T16:00:00+03:00",
         "full_price": 1502
     },
