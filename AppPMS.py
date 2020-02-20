@@ -148,8 +148,11 @@ def getAllBookings():
         print('arrival: {0}'.format(arrival))
         if surname is not None:
             print('surname: {0}'.format(surname))
-        ans = bookings
-
+        ans_booking = []
+        for item in bookings['bookings']:
+            if item['arrival'].startswith(arrival):
+                ans_booking.append(item)
+        ans = {"bookings": ans_booking}
         # print('getAllBookings ans: {0}'.format(ans))
     else:
         ans = generateBooking(booking_id)
