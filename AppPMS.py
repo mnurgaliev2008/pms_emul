@@ -165,6 +165,8 @@ def getAllBookings():
 def pay(booking_id):
     print('pay: {0}'.format(request.url))
     print('booking_id: {0}'.format(booking_id))
+    return jsonify({'is_money_back': False})
+
 
 def getClientInfoByClientId(client_id):
     print('getClientInfoByClientId client_id: {0}'.format(client_id))
