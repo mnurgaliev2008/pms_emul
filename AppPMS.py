@@ -143,6 +143,7 @@ def getAllBookings():
     booking_id = request.args.get('booking', None)
     if booking_id is None:
         arrival = request.args.get('arrival')
+        print(request.url)
         surname = request.args.get('surname', None)
         print('arrival: {0}'.format(arrival))
         if surname is not None:
