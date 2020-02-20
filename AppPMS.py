@@ -5,11 +5,11 @@ app_pms = Flask(__name__)
 
 bookings = {"bookings": [
     {
-        "booking_id": "1000",
+        "booking_id": 1000,
         "name": "ARNOLD",
         "surname": "SCHWARZENEGGER",
         "client_id": "2000",
-        "arrival": "2020-02-21T18:00:00+03:00",
+        "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-01-05T16:00:00+03:00",
         "full_price": 1500
     },
