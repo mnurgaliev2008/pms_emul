@@ -150,7 +150,7 @@ def getAllBookings():
     else:
         ans = generateBooking(booking_id)
         print('BookingId {0} return {1}'.format(booking_id, ans))
-    return jsonify(ans)
+    return jsonify([])
 
 def getClientInfoByClientId(client_id):
     print('getClientInfoByClientId client_id: {0}'.format(client_id))
