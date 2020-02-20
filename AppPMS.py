@@ -9,7 +9,7 @@ bookings = {"bookings": [
         "name": "ARNOLD",
         "surname": "SCHWARZENEGGER",
         "client_id": "2000",
-        "arrival": "2020-02-21T18:00:00+03:00",
+        "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-01-05T16:00:00+03:00",
         "full_price": 1500
     },
@@ -18,7 +18,7 @@ bookings = {"bookings": [
         "name": "НИКОЛАЙ",
         "surname": "KOLYCHEV",
         "client_id": "2001",
-        "arrival": "2020-02-21T18:00:00+03:00",
+        "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-03-05T16:00:00+03:00",
         "full_price": 1501
     },
@@ -27,7 +27,7 @@ bookings = {"bookings": [
         "name": "ARNOLD",
         "surname": "KOLYCHEV",
         "client_id": "2002",
-        "arrival": "2020-02-21T18:00:00+03:00",
+        "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-02-22T16:00:00+03:00",
         "full_price": 1502
     },
@@ -150,7 +150,7 @@ def getAllBookings():
     else:
         ans = generateBooking(booking_id)
         print('BookingId {0} return {1}'.format(booking_id, ans))
-    return jsonify({"bookings":[]})
+    return jsonify(ans)
 
 def getClientInfoByClientId(client_id):
     print('getClientInfoByClientId client_id: {0}'.format(client_id))
