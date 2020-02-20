@@ -90,7 +90,7 @@ def generateBooking(booking_id, hotel_id):
 
 @app_pms.route('/api/v1/hotels/1/clients', methods=['GET'])
 def getClientInfo():
-    client_id = request.args.get('client', None)-1000
+    client_id = int(request.args.get('client', None))-1000
     name, surname, arrival, departure, room_id = getClientFromBookings(client_id)
     client_info = {
         "client_id": client_id,
