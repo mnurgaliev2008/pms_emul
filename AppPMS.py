@@ -53,7 +53,7 @@ def getBooking(booking_id):
     return next((item for item in bookings['bookings'] if item['booking_id']==booking_id), None)
 
 def getBookingInfo(booking_id, hotel_id):
-    return next((item for item in booking_info_list if item['booking_id']=='{}'.format(booking_id) and item['hetel_id']=='{}'.format(hotel_id)),None)
+    return next((item for item in booking_info_list if item['booking_id']=='{}'.format(booking_id) and item['hotel_id']=='{}'.format(hotel_id)),None)
 
 def generateBooking(booking_id, hotel_id):
     global room_number, booking_info_list
