@@ -153,7 +153,7 @@ def getAllBookings():
         for item in bookings['bookings']:
             if item['arrival'].startswith(arrival):
                 ans_booking.append(item)
-                ans_id.append(item['booking_is'])
+                ans_id.append(item['booking_id'])
         ans = {"bookings": ans_booking}
         print('getAllBookings ans: {0}'.format(ans_id))
     else:
