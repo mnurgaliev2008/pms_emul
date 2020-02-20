@@ -18,7 +18,7 @@ bookings = {"bookings": [
         "name": "НИКОЛАЙ",
         "surname": "KOLYCHEV",
         "client_id": "2001",
-        "arrival": "2020-02-21T18:00:00+03:00",
+        "arrival": "2020-02-20T18:00:00+03:00",
         "departure": "2020-03-05T16:00:00+03:00",
         "full_price": 1501
     },
@@ -160,6 +160,10 @@ def getAllBookings():
         ans = generateBooking(booking_id)
         print('BookingId {0} return {1}'.format(booking_id, ans))
     return jsonify(ans)
+
+@app_pms.route('/api/v1/hotels/1/bookings', methods=['POST'])
+def pay():
+    print('pay: {0}'.format(request.url))
 
 def getClientInfoByClientId(client_id):
     print('getClientInfoByClientId client_id: {0}'.format(client_id))
