@@ -104,6 +104,12 @@ def getClientInfo():
     }
     return jsonify(client_info)
 
+@app_pms.route('/api/v1/hotels/<hotel_id>/bookings/<booking_id>/keys', methods=['POST'])
+def postKeys(hotel_id, booking_id):
+    print('postKeys: hotel_id={0}, booking_id{1}'.format(hotel_id,booking_id))
+    return jsonify({})
+
+
 
 @app_pms.route('/api/v1/hotels/<hotel_id>/bookings', methods=['GET'])
 def getAllBookings(hotel_id):
@@ -134,7 +140,7 @@ def pay(booking_id):
     for item in booking_info_list:
         if item['booking_id']=='{0}'.format(booking_id):
             item['pay_status']='ОПЛАЧЕНО'
-    return jsonify({'is_money_back': False})
+    return jsonify({'is_money_back': True})
 
 
 
