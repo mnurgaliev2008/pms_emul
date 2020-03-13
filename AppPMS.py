@@ -104,9 +104,9 @@ def getClientInfo():
     }
     return jsonify(client_info)
 
-@app_pms.route('/api/v1/hotels/<hotel_id>/bookings/<booking_id>/keys', methods=['POST'])
-def postKeys(hotel_id, booking_id):
-    print('postKeys: hotel_id={0}, booking_id{1}'.format(hotel_id,booking_id))
+@app_pms.route('/api/v1/hotels/<hotel_id>/bookings/<booking_id>/settle', methods=['POST'])
+def settle(hotel_id, booking_id):
+    print('settle: hotel_id={0}, booking_id{1}'.format(hotel_id,booking_id))
     return jsonify({})
 
 
